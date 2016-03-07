@@ -53,7 +53,7 @@ For Historical Analysis once the real time data processing is done the flag in D
    ###Surge Plot Snapshot
   ![Demo Snapshot](/uberUI/app/images/surgeplot.png) 
   
-  Project for <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:left" width="80px"/> MSDS
+  Project for <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:left" width="100px"/> MSDS
 
   
    
