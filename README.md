@@ -1,6 +1,8 @@
 # RiseInPrice                                     
 Data Engineering Project for Galvanize MS in Data Science Program.  
 
+![Surge Image](/uberUI/app/images/ubersurge.png)
+
 
 #Introduction
 
