@@ -1,5 +1,5 @@
-# RiseInPrice
-Data Engineering Project for Galvanize MS in Data Science Program. <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:middle" width="150px"/>
+# RiseInPrice                                     
+Data Engineering Project for <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:middle" width="100px"/> MS in Data Science Program.     
 
 #Introduction
 
