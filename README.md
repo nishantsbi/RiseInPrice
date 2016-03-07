@@ -47,8 +47,11 @@ For Historical Analysis once the real time data processing is done the flag in D
 
 * **Demo** 
 
-
+  ###Realtime location mapping Snapshot
   ![Demo Snapshot](/uberUI/app/images/demosnap.png) 
+  
+   ###Surge Plot Snapshot
+  ![Demo Snapshot](/uberUI/app/images/surgeplot.png) 
 
   
    
