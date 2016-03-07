@@ -32,6 +32,20 @@ For Historical Analysis once the real time data processing is done the flag in D
   * When the real time data is processed then the key which had "R" concatenated is changed to "B" for doing the batch analysis.
   * Graph is used to show the historical price surge behavior.
   
+
+* **Database**: Hbase is used for data storage  because of its consistent and high scale distributed processing nature.
+    It provides high speed read , writes and aggregation.
+   * Key in DB is ** R|start_latitude|start_longitude|end_latitude|end_longitude|timestamp** for realtime location mapping.
+   * Key in DB is ** B|start_latitude|start_longitude|end_latitude|end_longitude|timestamp** for historical analysis.
+   
+* **User Interface/Front-End**: Apache Flask framework is used to build the UI as it is light weight and easy to build.Google Maps API is used to show the realtime location's where price surge is happenning. 
+  * Google Maps API is used to show the geolocation's in San Francisco where price surge is happenning in realtime.
+  Blue marker shows that there is no surge while the read markers displays the surge in price.
+  * Plotly.js is used for plotting the graph for Historical Analysis. Based on the options selected by user (i.e date , start point,end point , type of uber car) a plot is generated which displays the surge behavior.
+   
+
+  
+  
   
  
 
