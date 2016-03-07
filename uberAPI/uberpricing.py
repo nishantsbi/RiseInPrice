@@ -2,8 +2,8 @@
 
 from uber_rides.session import Session
 from uber_rides.client import UberRidesClient
-
-session = Session(server_token='SAHuiguhEnsfrEZmtaP8SAWPkpcC_6-b5At266EC')
+#Add the token
+session = Session(server_token='')
 
 def getPriceEstimate(start_lat,start_long,end_lat,end_long):
 
