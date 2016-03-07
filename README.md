@@ -42,6 +42,15 @@ For Historical Analysis once the real time data processing is done the flag in D
   * Google Maps API is used to show the geolocation's in San Francisco where price surge is happenning in realtime.
   Blue marker shows that there is no surge while the read markers displays the surge in price.
   * Plotly.js is used for plotting the graph for Historical Analysis. Based on the options selected by user (i.e date , start point,end point , type of uber car) a plot is generated which displays the surge behavior.
+  * Javascript and Ajax is used for rendering and implementing different features on UI .
+  
+
+* **Demo** 
+
+
+  ![Demo Snapshot](/uberUI/app/images/demosnap.png) 
+
+  
    
 
   
