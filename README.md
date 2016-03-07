@@ -1,5 +1,5 @@
 # RiseInPrice
-Data Engineering Project for Galvanize MS in Data Science Program.
+Data Engineering Project for Galvanize MS in Data Science Program.![Architecture Diagram](/uberUI/app/images/galvanize.svg)
 
 #Introduction
 
