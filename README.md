@@ -1,5 +1,6 @@
 # RiseInPrice                                     
-Data Engineering Project for Galvanize MS in Data Science Program.     
+Data Engineering Project for Galvanize MS in Data Science Program.  
+
 
 #Introduction
 
@@ -52,6 +53,19 @@ For Historical Analysis once the real time data processing is done the flag in D
   
    ###Surge Plot Snapshot
   ![Demo Snapshot](/uberUI/app/images/surgeplot.png) 
+  
+ * #Steps for Execution
+   
+  * Install Python Dependencies:  sudo pip install uber_rides,pyspark,kafka-python,happybase
+  * Set up the cronjob : crontab /cronjob/uber_job.cron
+  * Start Hbase : bin/start_hbase.sh
+  * Start Thrift : bin/hbase thrift start
+  * Start Kafka : bin/kafka-server-start.sh config/server.properties
+  * Start Spark Streaming : bin/spark-submit --jars spark-streaming-kafka-assembly_2.10-1.6.0.jar,lib/spark-examples-1.6.0-hadoop2.6.0.jar,home/admin1/Software/hbase-1.1.3/lib/hbase-examples-1.1.3.jar  /home/admin1/Galvanize/FinalProjectDE/sparkstreaming/streamingdata_uber.py localhost:2181 test
+
+  * Start Flask UI : uberUI/python run.py
+  * Open the UI page: http://localhost:5000
+ 
   
   Project for <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:left" width="100px"/> MSDS
 
