@@ -17,4 +17,11 @@ For Historical Analysis once the real time data processing is done the flag is c
 
 #Data Pipeline and Architecture Diagram
 
+![Architecture Diagram](/uberUI/app/images/ArchitectureDiagram.png)
+
+
+
+
+
+
 
