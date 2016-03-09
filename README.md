@@ -1,5 +1,9 @@
-# RiseInPrice                                     
-Data Engineering Project for Galvanize MS in Data Science Program.  
+# RiseInPrice       
+
+* Realtime mapping of Geolocation's in San Francisco for Uber Price Surge and Historical Analysis of surge behavior.
+
+* Data Engineering Project for Galvanize MS in Data Science Program.  
+
 
 ![Surge Image](/uberUI/app/images/ubersurge.png)
 
