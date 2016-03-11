@@ -28,8 +28,9 @@ For Historical Analysis once the real time data processing is done the flag in D
 
 * **Ingestion Layer**: Kafka is being used for Data Ingestion. As it is highly scalable , has low latency and high throughput.
 
- * Each start and end point i.e latitude and longitude is passed as Key with the message to store the location wise pricing detail.
- * All the keyed messages are published to a topic
+ * Each start and end point i.e latitude and longitude is passed as Key with the message to store the location wise pricing detail. Key is prepared in the format 'start point latitude|start point  longitude|End point latitude | End point longitude'
+ 
+ * Cron job call the UBER API to get the pricing details and then the keyed messages are published to a kafka topic.
  
 * **Speed Layer**: Spark Streaming is being used for the stream processing. As spark streaming process data in micro batches it was suitable for this scenario as data from uber API refreshes after every minute.
   * Data processing and Transformation was done important fields were extracted from the json string. A string "R" was concatenated to the key to identify the real time processing on UI side.
@@ -47,7 +48,7 @@ For Historical Analysis once the real time data processing is done the flag in D
    
 * **User Interface/Front-End**: Apache Flask framework is used to build the UI as it is light weight and easy to build.Google Maps API is used to show the realtime location's where price surge is happenning. 
   * Google Maps API is used to show the geolocation's in San Francisco where price surge is happenning in realtime.
-  Blue marker shows that there is no surge while the read markers displays the surge in price.
+  The markers displays the real time locations where there is surge in price.
   * Plotly.js is used for plotting the graph for Historical Analysis. Based on the options selected by user (i.e date , start point,end point , type of uber car) a plot is generated which displays the surge behavior.
   * Javascript and Ajax is used for rendering and implementing different features on UI .
   
@@ -63,6 +64,8 @@ For Historical Analysis once the real time data processing is done the flag in D
  * #Steps for Execution
    
   * Install Python Dependencies:  sudo pip install uber_rides,pyspark,kafka-python,happybase
+  * Setting up the table in Hbase.
+  * Create topics in Kafka.
   * Set up the cronjob : crontab /cronjob/uber_job.cron
   * Start Hbase : bin/start_hbase.sh
   * Start Thrift : bin/hbase thrift start
