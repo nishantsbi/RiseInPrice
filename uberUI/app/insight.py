@@ -19,8 +19,7 @@ def maps():
 def realtime():
     conn = happybase.Connection()
     table = conn.table('uber_price_estimate')
-    #row = table.row('StormData')
-    #cabs = []
+    
     cabs_uberx=[]
     cabs_uberxl=[]
     cabs_uberblack=[]
@@ -49,7 +48,7 @@ def realtime():
     	table.put(key.replace('R','B'),val)
     	table.delete(key)
     return jsonify(loc_dict)
-    #return jsonify(cabs=cabs)
+    
 	
 
 
@@ -64,9 +63,9 @@ def arch():
 
 @app.route('/historicaldataprocessing')
 def histdata():
-	#print request.args.get('startLoc', 0),request.args.get('endLoc', 0)
+	
 	car_type=request.args.get('cartype', 0)
-	#print car_type
+	
 	hour_surge_dict={}
 	pref="B"+"|"+request.args.get('startLoc', 0)+"|"+request.args.get('endLoc', 0)+"|"+request.args.get('date', 0)
 	hour_list=["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
@@ -75,16 +74,14 @@ def histdata():
 		prefix=pref+' '+i
 		surge_hour="hr"+i
 		surge_value=get_surge(prefix,car_type)
-		#print surge_value
-		#print car_type
-		#print surge_value[car_type]
+		
 		lencalc=0
 		#if len(surge_value[car_type]) > 1:
 		lencalc=len(surge_value[car_type])
 		#if len(surge_value[car_type])==0:
 		#	surge_value[car_type].append(0)
 		hour_surge_dict[surge_hour]=[i]*lencalc,surge_value[car_type]
-	#print hour_surge_dict
+	
 	return jsonify(hour_surge_dict)
 	
 
