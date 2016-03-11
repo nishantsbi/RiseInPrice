@@ -33,13 +33,9 @@ def mapjson(price):
 	
 	z=price[1].encode('ascii')
 	k=price[0].encode('ascii')
-	print "keytype:",type(k)
 	pkey=k+"|"+ str(datetime.datetime.now())
-	print "pkey:",type(pkey)
 	z = ast.literal_eval(z)
-	#resp=(str(z[0]['product_id']),[str(z[0]['product_id']),"uberfamily","uber_price_json",json.dumps(z[0])])
 	resp=("R"+"|"+pkey,["R"+"|"+pkey,"uberfamily","uber_price_json",json.dumps(z)])
-	print resp
 	return resp
 
 
