@@ -41,7 +41,6 @@ def mapjson(price):
 
 ssc=StreamingContext(sc,60)
 zkQuorum, topic = sys.argv[1:]
-print zkQuorum,topic
 kvs=KafkaUtils.createStream(ssc, zkQuorum, "spark-streaming-consumer", {topic: 1})
 lines = kvs.map(lambda x: [x[0],x[1]])
 lines.pprint()
