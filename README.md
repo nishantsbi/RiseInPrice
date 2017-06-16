@@ -77,9 +77,13 @@ For Historical Analysis once the real time data processing is done the flag in D
  
   
   Project for <img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" style="vertical-align:left" width="100px"/> MSDS
-
   
-   
+ COPYRIGHT
+	All contributions by Deep Narain Singh:
+ Copyright (c) 2016, Deep Narain Singh.
+	All rights reserved.
+	
+
 
   
   
